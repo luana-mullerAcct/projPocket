@@ -11,4 +11,5 @@ export const ELEMENTS = {
     tableShippingData: '.vtex-store-components-3-x-shippingTableBody',
     tableShippingDataUnavailable: '.vtex-store-components-3-x-shippingNoMessage'
   }
-  
+  /*estou capturando o nome dos elementos na plataforma que serão utilizados e 
+  passando uma nova referencia para usar ela no restante do código*/

@@ -26,3 +26,17 @@ When("I do login using correct email and password", () => {
 Then("I must be logged on the site", () => {
     cy.get('.vtex-login-2-x-sendButton > .vtex-button').click();
 })
+
+
+Given("I'm on the product page", () => {
+    cy.visit("https://www.johnjohndenim.com.br/vestido-amplo-cherry-john-john-feminino-preto-15-11-4412/p");
+})
+
+When("Validate price block ", () =>{
+    cy.contains(vtex-product-price-1-x-sellingPriceValue).should('be.visible')
+})
+
+
+Then("Validate product image", () => {
+    cy.get('.swiper-slide-active > .vtex-store-components-3-x-productImage > .relative > div > .vtex-store-components-3-x-productImageTag').should('have.attr','src="https://johnjohndenimqa.vtexassets.com/arquivos/ids/161096-800-auto?v=638290986358500000&width=800&height=auto&aspect=true"')
+})
